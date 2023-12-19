@@ -10,6 +10,9 @@ class FH_PLATFORM_API UFuncLib_PlatformUtils : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
+	UFUNCTION(BlueprintCallable, meta = (ExpandEnumAsExecs = "RUNTIME", ToolTip = "判断当前的环境"), Category = "FH|Runtime")
+	static void SwitchRuntime(ERuntime& RUNTIME);
+
 	UFUNCTION(BlueprintCallable, meta=(ExpandEnumAsExecs="PLATFORM", ToolTip="依旧当前的平台,在蓝图中走不同的分支"), Category="FH|Platform")
 	static void SwitchPlatform(EPlatform& PLATFORM);
 
