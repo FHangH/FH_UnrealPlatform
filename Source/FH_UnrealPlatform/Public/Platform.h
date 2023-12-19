@@ -10,6 +10,15 @@ enum class ERuntime : uint8
 };
 
 UENUM(BlueprintType)
+enum class ERuntime_Editor_Debug_Development_Shipping : uint8
+{
+	ER_Editor		UMETA(Displayname="Editor"),
+	ER_Debug		UMETA(Displayname="Debug"),
+	ER_Development	UMETA(Displayname="Development"),
+	ER_Shipping		UMETA(Displayname="Shipping")
+};
+
+UENUM(BlueprintType)
 enum class EPlatform : uint8
 {
 	PC		UMETA(Displayname="PC"),
