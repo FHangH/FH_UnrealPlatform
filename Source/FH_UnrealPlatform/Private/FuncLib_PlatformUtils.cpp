@@ -1,5 +1,14 @@
 ﻿#include "FuncLib_PlatformUtils.h"
 
+void UFuncLib_PlatformUtils::SwitchRuntime(ERuntime& RUNTIME)
+{
+#if UE_EDITOR
+	RUNTIME = ERuntime::ER_Editor;
+#else
+	RUNTIME = ERuntime::ER_Runtime;
+#endif
+}
+
 void UFuncLib_PlatformUtils::SwitchPlatform(EPlatform& PLATFORM)
 {
 #if PLATFORM_WINDOWS
