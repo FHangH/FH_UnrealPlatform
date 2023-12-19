@@ -9,6 +9,20 @@ void UFuncLib_PlatformUtils::SwitchRuntime(ERuntime& RUNTIME)
 #endif
 }
 
+void UFuncLib_PlatformUtils::SwitchRuntime_Editor_Debug_Development_Shipping(
+	ERuntime_Editor_Debug_Development_Shipping& RUNTIME)
+{
+#if UE_EDITOR
+	RUNTIME = ERuntime_Editor_Debug_Development_Shipping::ER_Editor;
+#elif UE_BUILD_DEBUG
+	RUNTIME = ERuntime_Editor_Debug_Development_Shipping::ER_Debug;
+#elif UE_BUILD_DEVELOPMENT
+	RUNTIME = ERuntime_Editor_Debug_Development_Shipping::ER_Development;
+#elif UE_BUILD_SHIPPING
+	RUNTIME = ERuntime_Editor_Debug_Development_Shipping::ER_Shipping;
+#endif
+}
+
 void UFuncLib_PlatformUtils::SwitchPlatform(EPlatform& PLATFORM)
 {
 #if PLATFORM_WINDOWS
