@@ -3,6 +3,13 @@
 #include "Platform.generated.h"
 
 UENUM(BlueprintType)
+enum class ERuntime : uint8
+{
+	ER_Runtime	UMETA(Displayname="Runtime"),
+	ER_Editor	UMETA(Displayname="Editor")
+};
+
+UENUM(BlueprintType)
 enum class EPlatform : uint8
 {
 	PC		UMETA(Displayname="PC"),
