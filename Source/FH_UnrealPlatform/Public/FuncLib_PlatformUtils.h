@@ -1,15 +1,16 @@
 ﻿#pragma once
 
 #include "CoreMinimal.h"
-#include "Platform.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Platform.h"
 #include "FuncLib_PlatformUtils.generated.h"
 
-UCLASS(Blueprintable)
-class FH_PLATFORM_API UFuncLib_PlatformUtils : public UBlueprintFunctionLibrary
+UCLASS()
+class FH_UNREALPLATFORM_API UFuncLib_PlatformUtils : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
+public:
 	UFUNCTION(BlueprintCallable, meta = (ExpandEnumAsExecs = "RUNTIME", ToolTip = "判断当前的环境"), Category = "FH|Runtime")
 	static void SwitchRuntime(ERuntime& RUNTIME);
 
