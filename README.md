@@ -1,3 +1,7 @@
+# !!!
+这个插件有些问题，安装，编译，运行都没问题，但打包后，提示未安装，暂时没找到原因
+该插件的翻新版本：[UnrealPlatform](https://github.com/FHangH/UnrealPlatform)
+
 # FH_UnrealPlatform
 简单的在虚幻中实现依据当前客户端的运行平台，区分执行不同的功能，支持C++和蓝图使用，自定义也简单
 
